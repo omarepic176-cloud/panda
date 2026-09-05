@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>panda — Admin Panel</title>
+    <title>باندا — لوحة التحكم</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js">
@@ -93,7 +93,7 @@
             margin-bottom: 1.8rem;
         }
         .login-card .form-group {
-            text-align: left;
+            text-align: right;
         }
         .login-card .form-group label {
             display: block;
@@ -103,6 +103,7 @@
             letter-spacing: 0.04em;
             color: #666;
             margin-bottom: 0.3rem;
+            text-align: right;
         }
         .login-card .form-group input {
             width: 100%;
@@ -157,7 +158,7 @@
         .sidebar {
             width: 260px;
             background: #ffffff;
-            border-right: 1px solid #e8eaed;
+            border-left: 1px solid #e8eaed;
             padding: 2rem 1.2rem;
             min-height: 100vh;
             position: sticky;
@@ -215,6 +216,7 @@
             letter-spacing: 0.08em;
             color: #999;
             padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+            text-align: right;
         }
         .sidebar-nav a {
             display: flex;
@@ -229,6 +231,8 @@
             transition: all 0.15s ease;
             cursor: pointer;
             position: relative;
+            text-align: right;
+            justify-content: flex-end;
         }
         .sidebar-nav a i {
             width: 20px;
@@ -252,7 +256,7 @@
             color: #ffffff;
         }
         .sidebar-nav a .badge-nav {
-            margin-left: auto;
+            margin-right: auto;
             background: #e8eaed;
             color: #555;
             font-size: 0.6rem;
@@ -310,11 +314,13 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: #1a1a1e;
+            text-align: right;
         }
         .page-header p {
             color: #777;
             font-size: 0.95rem;
             margin-top: 0.2rem;
+            text-align: right;
         }
         .page-header .header-actions {
             display: flex;
@@ -384,7 +390,7 @@
             font-weight: 700;
             padding: 0.05rem 0.5rem;
             border-radius: 10px;
-            margin-left: 0.3rem;
+            margin-right: 0.3rem;
         }
         .section-tabs .tab-btn.active .tab-badge {
             background: rgba(255, 255, 255, 0.2);
@@ -491,6 +497,7 @@
             letter-spacing: 0.04em;
             color: #666;
             margin-bottom: 0.3rem;
+            text-align: right;
         }
         .form-group .label-hint {
             font-weight: 400;
@@ -508,6 +515,7 @@
             transition: border 0.15s, box-shadow 0.15s;
             background: #fafafa;
             color: #1a1a1e;
+            text-align: right;
         }
         .form-control:focus {
             border-color: #1a1a1e;
@@ -517,13 +525,14 @@
         }
         .form-control::placeholder {
             color: #bbb;
+            text-align: right;
         }
         select.form-control {
             appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 0.8rem center;
-            padding-right: 2.2rem;
+            background-position: left 0.8rem center;
+            padding-left: 2.2rem;
         }
         textarea.form-control {
             resize: vertical;
@@ -553,6 +562,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            justify-content: center;
         }
         .btn-primary {
             background: #1a1a1e;
@@ -641,7 +651,7 @@
         .product-list {
             max-height: 480px;
             overflow-y: auto;
-            padding-right: 0.3rem;
+            padding-left: 0.3rem;
         }
         .product-list::-webkit-scrollbar {
             width: 4px;
@@ -665,6 +675,8 @@
             margin-bottom: 0.4rem;
             transition: background 0.15s;
             border: 1px solid transparent;
+            flex-wrap: wrap;
+            gap: 0.3rem;
         }
         .product-item:hover {
             background: #f0f2f5;
@@ -708,6 +720,7 @@
             display: flex;
             align-items: center;
             gap: 0.3rem;
+            flex-wrap: wrap;
         }
         .product-item .info .meta .badge {
             padding: 0.05rem 0.5rem;
@@ -769,7 +782,7 @@
         .order-list {
             max-height: 520px;
             overflow-y: auto;
-            padding-right: 0.3rem;
+            padding-left: 0.3rem;
         }
         .order-list::-webkit-scrollbar {
             width: 4px;
@@ -899,7 +912,7 @@
             color: #888;
             cursor: pointer;
             text-decoration: underline;
-            margin-left: 0.3rem;
+            margin-right: 0.3rem;
         }
         .order-item .order-detail-toggle:hover {
             color: #1a1a1e;
@@ -912,6 +925,7 @@
             font-size: 0.75rem;
             color: #555;
             line-height: 1.6;
+            text-align: right;
         }
         .order-item .order-detail.open {
             display: block;
@@ -946,7 +960,7 @@
             background: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 20px;
-            padding: 0.15rem 0.6rem 0.15rem 0.4rem;
+            padding: 0.15rem 0.4rem 0.15rem 0.6rem;
             font-size: 0.75rem;
             font-weight: 500;
             color: #333;
@@ -971,7 +985,7 @@
             color: #bbb;
             font-size: 0.7rem;
             transition: color 0.15s;
-            margin-left: 0.1rem;
+            margin-right: 0.1rem;
         }
         .tag .remove-tag:hover {
             color: #e74c3c;
@@ -1020,7 +1034,7 @@
             background: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 20px;
-            padding: 0.2rem 0.7rem 0.2rem 0.4rem;
+            padding: 0.2rem 0.4rem 0.2rem 0.7rem;
             font-size: 0.75rem;
             font-weight: 500;
             color: #333;
@@ -1046,6 +1060,15 @@
         .category-chip .remove-cat:hover {
             color: #e74c3c;
         }
+        .category-chip .edit-cat {
+            cursor: pointer;
+            color: #888;
+            font-size: 0.7rem;
+            transition: color 0.15s;
+        }
+        .category-chip .edit-cat:hover {
+            color: #2980b9;
+        }
 
         /* ─── SHIPPING GRID ─── */
         .shipping-grid {
@@ -1054,7 +1077,7 @@
             gap: 0.4rem;
             max-height: 280px;
             overflow-y: auto;
-            padding-right: 0.2rem;
+            padding-left: 0.2rem;
         }
         .shipping-grid::-webkit-scrollbar {
             width: 4px;
@@ -1081,6 +1104,7 @@
             flex: 1;
             font-weight: 500;
             color: #333;
+            text-align: right;
         }
         .shipping-item input {
             width: 56px;
@@ -1229,7 +1253,7 @@
                 z-index: 100;
                 box-shadow: 4px 0 24px rgba(0, 0, 0, 0.08);
                 transition: transform 0.3s ease;
-                border-right: none;
+                border-left: none;
             }
             .sidebar.open {
                 transform: translateX(0);
@@ -1383,6 +1407,7 @@
             margin-bottom: 6px;
             border-bottom: 1px solid #e8eaed;
             padding-bottom: 4px;
+            text-align: right;
         }
         .receipt .receipt-section .row {
             display: flex;
@@ -1495,6 +1520,29 @@
         .orders-only-hide {
             display: none !important;
         }
+
+        /* ─── CATEGORY EDIT FORM ─── */
+        .category-edit-form {
+            background: #fafafa;
+            border: 1px solid #e8eaed;
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .category-edit-form.active {
+            display: block;
+        }
+        .category-edit-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .category-edit-form .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1503,15 +1551,15 @@
     <div class="login-overlay" id="loginOverlay">
         <div class="login-card">
             <div class="brand-icon">p</div>
-            <h1>panda</h1>
-            <p class="sub">Admin Dashboard</p>
+            <h1>باندا</h1>
+            <p class="sub">لوحة التحكم</p>
             <div class="form-group">
-                <label for="loginPassword">Enter Password</label>
+                <label for="loginPassword">أدخل كلمة المرور</label>
                 <input type="password" id="loginPassword" placeholder="••••••••" autofocus />
             </div>
             <div class="login-error" id="loginError"></div>
-            <button class="btn-login" id="loginBtn">Unlock <i class="fas fa-arrow-right" style="margin-left:0.4rem;"></i></button>
-            <div class="login-footer">panda · secure access</div>
+            <button class="btn-login" id="loginBtn">فتح <i class="fas fa-arrow-left" style="margin-right:0.4rem;"></i></button>
+            <div class="login-footer">باندا · دخول آمن</div>
         </div>
     </div>
 
@@ -1523,38 +1571,38 @@
         <div class="sidebar-brand">
             <div class="brand-icon">p</div>
             <div class="brand-text">
-                Admin Panel
-                <span>panda</span>
+                لوحة التحكم
+                <span>باندا</span>
             </div>
         </div>
         <nav class="sidebar-nav">
-            <div class="nav-label">Management</div>
+            <div class="nav-label">الإدارة</div>
             <a href="#" class="active" data-tab="orders">
-                <i class="fas fa-box"></i> Orders
+                <i class="fas fa-box"></i> الطلبات
                 <span class="badge-nav" id="orderBadgeNav">0</span>
             </a>
             <a href="#" data-tab="products" class="full-access-only">
-                <i class="fas fa-tshirt"></i> Products
+                <i class="fas fa-tshirt"></i> المنتجات
                 <span class="badge-nav" id="productBadgeNav">0</span>
             </a>
             <a href="#" data-tab="categories" class="full-access-only">
-                <i class="fas fa-tags"></i> Categories
+                <i class="fas fa-tags"></i> التصنيفات
                 <span class="badge-nav" id="categoryBadgeNav">0</span>
             </a>
             <a href="#" data-tab="shipping" class="full-access-only">
-                <i class="fas fa-truck"></i> Shipping
+                <i class="fas fa-truck"></i> الشحن
             </a>
-            <div class="nav-label" style="margin-top:1rem;">Quick Actions</div>
+            <div class="nav-label" style="margin-top:1rem;">إجراءات سريعة</div>
             <a href="#" id="navAddProduct" class="full-access-only">
-                <i class="fas fa-plus-circle"></i> Add New Product
+                <i class="fas fa-plus-circle"></i> إضافة منتج
             </a>
             <a href="#" id="navAddCategory" class="full-access-only">
-                <i class="fas fa-plus-circle"></i> Add Category
+                <i class="fas fa-plus-circle"></i> إضافة تصنيف
             </a>
         </nav>
         <div class="sidebar-footer">
-            <i class="fas fa-store-alt"></i> panda
-            <div><span class="logout-link" id="logoutLink"><i class="fas fa-sign-out-alt"></i> Logout</span></div>
+            <i class="fas fa-store-alt"></i> باندا
+            <div><span class="logout-link" id="logoutLink"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</span></div>
         </div>
     </aside>
 
@@ -1564,15 +1612,15 @@
         <!-- ─── PAGE HEADER ─── -->
         <div class="page-header">
             <div>
-                <h1 id="pageTitle">Dashboard</h1>
-                <p id="pageSubtitle">Manage your store with ease.</p>
+                <h1 id="pageTitle">لوحة التحكم</h1>
+                <p id="pageSubtitle">إدارة متجرك بكل سهولة.</p>
             </div>
             <div class="header-actions">
                 <button id="mobileMenuBtn" style="display:none;background:#f0f2f5;border:1px solid #e0e0e0;border-radius:8px;padding:0.5rem 0.8rem;font-size:1rem;cursor:pointer;">
                     <i class="fas fa-bars"></i>
                 </button>
                 <button class="btn btn-primary" id="headerAddProduct" style="display:none;">
-                    <i class="fas fa-plus"></i> Add Product
+                    <i class="fas fa-plus"></i> إضافة منتج
                 </button>
             </div>
         </div>
@@ -1580,19 +1628,19 @@
         <!-- ─── SECTION TABS ─── -->
         <div class="section-tabs" id="sectionTabs">
             <button class="tab-btn active" data-tab="orders">
-                <i class="fas fa-box"></i> Orders
+                <i class="fas fa-box"></i> الطلبات
                 <span class="tab-badge" id="orderBadge">0</span>
             </button>
             <button class="tab-btn full-access-only" data-tab="products">
-                <i class="fas fa-tshirt"></i> Products
+                <i class="fas fa-tshirt"></i> المنتجات
                 <span class="tab-badge" id="productBadge">0</span>
             </button>
             <button class="tab-btn full-access-only" data-tab="categories">
-                <i class="fas fa-tags"></i> Categories
+                <i class="fas fa-tags"></i> التصنيفات
                 <span class="tab-badge" id="categoryBadge">0</span>
             </button>
             <button class="tab-btn full-access-only" data-tab="shipping">
-                <i class="fas fa-truck"></i> Shipping
+                <i class="fas fa-truck"></i> الشحن
             </button>
         </div>
 
@@ -1600,13 +1648,13 @@
         <section class="section-panel active" id="panelOrders">
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-box"></i> All Orders</h3>
-                    <span style="font-size:0.8rem;color:#888;" id="orderCountLabel">0 orders</span>
+                    <h3><i class="fas fa-box"></i> جميع الطلبات</h3>
+                    <span style="font-size:0.8rem;color:#888;" id="orderCountLabel">0 طلبات</span>
                 </div>
                 <div class="order-list" id="orderList">
                     <div class="empty-state">
                         <i class="fas fa-inbox"></i>
-                        <p>No orders yet.</p>
+                        <p>لا توجد طلبات حتى الآن.</p>
                     </div>
                 </div>
             </div>
@@ -1617,86 +1665,86 @@
             <!-- Add / Edit Product Card -->
             <div class="card" id="productFormCard">
                 <div class="card-header">
-                    <h3><i class="fas fa-pen-fancy"></i> <span id="formTitle">Add Product</span></h3>
-                    <button class="card-action" id="cancelEditBtn" style="display:none;">Cancel Edit</button>
+                    <h3><i class="fas fa-pen-fancy"></i> <span id="formTitle">إضافة منتج</span></h3>
+                    <button class="card-action" id="cancelEditBtn" style="display:none;">إلغاء التعديل</button>
                 </div>
                 <form id="productForm" autocomplete="off">
                     <input type="hidden" id="editProductId" value="" />
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Product Name</label>
-                            <input type="text" class="form-control" id="pName" placeholder="e.g. Boxy Cotton Tee" required />
+                            <label>اسم المنتج</label>
+                            <input type="text" class="form-control" id="pName" placeholder="مثل: تي شيرت قطني" required />
                         </div>
                         <div class="form-group">
-                            <label>Category</label>
+                            <label>التصنيف</label>
                             <select class="form-control" id="pCategory"></select>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Price (LE)</label>
+                            <label>السعر (ج.م)</label>
                             <input type="number" class="form-control" id="pPrice" placeholder="1250" required step="0.01" min="0" />
                         </div>
                         <div class="form-group">
-                            <label>Old Price (LE) <span class="label-hint">(sale)</span></label>
+                            <label>السعر القديم (ج.م) <span class="label-hint">(تخفيض)</span></label>
                             <input type="number" class="form-control" id="pOldPrice" placeholder="1500" step="0.01" min="0" />
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Stock Quantity</label>
+                            <label>الكمية المتاحة</label>
                             <input type="number" class="form-control" id="pStock" placeholder="10" min="0" value="10" />
                         </div>
                         <div class="form-group" style="display:flex;align-items:flex-end;">
                             <div class="toggle-group">
-                                <label><input type="checkbox" id="pUnlimitedStock" /> ♾️ Unlimited Stock</label>
+                                <label><input type="checkbox" id="pUnlimitedStock" /> ♾️ مخزون غير محدود</label>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
-                        <textarea class="form-control" id="pDescription" placeholder="Product description..."></textarea>
+                        <label>الوصف</label>
+                        <textarea class="form-control" id="pDescription" placeholder="وصف المنتج..."></textarea>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Sizes <span class="label-hint">(e.g. S, M, L, XL)</span></label>
+                            <label>المقاسات <span class="label-hint">(مثل: S, M, L, XL)</span></label>
                             <div class="tag-input-group">
-                                <input type="text" class="form-control" id="sizeInput" placeholder="e.g. S" style="flex:1;min-width:80px;" />
-                                <button type="button" class="btn btn-primary btn-sm" id="addSizeBtn">Add</button>
+                                <input type="text" class="form-control" id="sizeInput" placeholder="مثل: S" style="flex:1;min-width:80px;" />
+                                <button type="button" class="btn btn-primary btn-sm" id="addSizeBtn">إضافة</button>
                             </div>
                             <div class="tag-container" id="sizeTags"></div>
                         </div>
                         <div class="form-group">
-                            <label>Color Variants <span class="label-hint">(each with image)</span></label>
+                            <label>الألوان <span class="label-hint">(كل لون مع صورة)</span></label>
                             <div class="tag-input-group">
                                 <input type="color" id="colorPicker" value="#2C2C2C" />
                                 <input type="file" id="colorImageFile" accept="image/*" style="flex:1;min-width:80px;" />
-                                <button type="button" class="btn btn-primary btn-sm" id="addColorBtn">Add</button>
+                                <button type="button" class="btn btn-primary btn-sm" id="addColorBtn">إضافة</button>
                             </div>
                             <div class="tag-container" id="colorTags"></div>
                         </div>
                     </div>
 
                     <div class="toggle-group" style="margin:0.5rem 0 0.8rem 0;">
-                        <label><input type="checkbox" id="pBestSelling" /> ⭐ Best Seller</label>
-                        <label><input type="checkbox" id="pNewArrival" /> 🆕 New Arrival</label>
+                        <label><input type="checkbox" id="pBestSelling" /> ⭐ الأكثر مبيعاً</label>
+                        <label><input type="checkbox" id="pNewArrival" /> 🆕 وصول حديث</label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block" id="submitProductBtn">Add Product</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="submitProductBtn">إضافة المنتج</button>
                 </form>
             </div>
 
             <!-- Product List Card -->
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-list"></i> All Products</h3>
-                    <span style="font-size:0.8rem;color:#888;" id="productCountLabel">0 products</span>
+                    <h3><i class="fas fa-list"></i> جميع المنتجات</h3>
+                    <span style="font-size:0.8rem;color:#888;" id="productCountLabel">0 منتجات</span>
                 </div>
                 <div class="product-list" id="productList">
                     <div class="empty-state">
                         <i class="fas fa-tshirt"></i>
-                        <p>No products yet. Add your first product above.</p>
+                        <p>لا توجد منتجات. أضف منتجك الأول أعلاه.</p>
                     </div>
                 </div>
             </div>
@@ -1704,35 +1752,41 @@
 
         <!-- ─── SECTION: CATEGORIES ─── -->
         <section class="section-panel" id="panelCategories">
+            <!-- Add / Edit Category Form -->
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-plus-circle"></i> Add New Category</h3>
+                    <h3><i class="fas fa-plus-circle"></i> <span id="categoryFormTitle">إضافة تصنيف جديد</span></h3>
+                    <button class="card-action" id="cancelCategoryEditBtn" style="display:none;">إلغاء التعديل</button>
                 </div>
+                <input type="hidden" id="editCategoryKey" value="" />
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Category Name</label>
-                        <input type="text" class="form-control" id="newCategoryName" placeholder="e.g. TOPS" />
+                        <label>اسم التصنيف</label>
+                        <input type="text" class="form-control" id="newCategoryName" placeholder="مثل: تي شيرتات" />
                     </div>
                     <div class="form-group">
-                        <label>Category Image</label>
+                        <label>صورة التصنيف</label>
                         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
                             <input type="file" id="categoryImageFile" accept="image/*" style="flex:1;min-width:180px;padding:0.4rem;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;font-size:0.85rem;" />
-                            <button class="btn btn-primary btn-sm" id="uploadCategoryImageBtn">Upload</button>
+                            <button class="btn btn-primary btn-sm" id="uploadCategoryImageBtn">رفع</button>
                             <input type="hidden" id="categoryImageUrl" value="" />
+                        </div>
+                        <div id="categoryImagePreview" style="margin-top:0.4rem;display:none;">
+                            <img id="categoryPreviewImg" src="" alt="معاينة الصورة" style="max-width:100px;max-height:60px;border-radius:6px;border:1px solid #e0e0e0;" />
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" id="addCategoryBtn"><i class="fas fa-plus"></i> Add Category</button>
+                <button class="btn btn-primary" id="addCategoryBtn"><i class="fas fa-plus"></i> إضافة التصنيف</button>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-tags"></i> All Categories</h3>
-                    <span style="font-size:0.8rem;color:#888;" id="categoryCountLabel">0 categories</span>
+                    <h3><i class="fas fa-tags"></i> جميع التصنيفات</h3>
+                    <span style="font-size:0.8rem;color:#888;" id="categoryCountLabel">0 تصنيفات</span>
                 </div>
                 <div class="category-grid" id="categoryList">
                     <div class="empty-state" style="padding:1.5rem 0;">
-                        <p>No categories yet.</p>
+                        <p>لا توجد تصنيفات حتى الآن.</p>
                     </div>
                 </div>
             </div>
@@ -1742,10 +1796,10 @@
         <section class="section-panel" id="panelShipping">
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-truck"></i> Shipping Rates <span class="label-hint" style="font-weight:400;font-size:0.7rem;">(27 Governorates)</span></h3>
-                    <button class="card-action" id="resetShippingBtn">Reset all to 1 LE</button>
+                    <h3><i class="fas fa-truck"></i> أسعار الشحن <span class="label-hint" style="font-weight:400;font-size:0.7rem;">(27 محافظة)</span></h3>
+                    <button class="card-action" id="resetShippingBtn">إعادة الكل إلى 1 ج.م</button>
                 </div>
-                <div style="font-size:0.7rem;color:#888;margin-bottom:0.8rem;">Default: 1 LE — edit any governorate's price below.</div>
+                <div style="font-size:0.7rem;color:#888;margin-bottom:0.8rem;text-align:right;">القيمة الافتراضية: 1 ج.م — يمكن تعديل سعر أي محافظة أدناه.</div>
                 <div class="shipping-grid" id="shippingGrid"></div>
             </div>
         </section>
@@ -1755,7 +1809,7 @@
     <!-- ─── LIGHTBOX ─── -->
     <div class="lightbox-overlay" id="imageLightbox" onclick="closeImageLightbox()">
         <button class="lightbox-close" onclick="event.stopPropagation(); closeImageLightbox();">&times;</button>
-        <img class="lightbox-image" id="lightboxImage" src="" alt="Full screen product image" onclick="event.stopPropagation();" />
+        <img class="lightbox-image" id="lightboxImage" src="" alt="عرض الصورة بكامل الشاشة" onclick="event.stopPropagation();" />
     </div>
 
     <!-- ─── TOAST CONTAINER ─── -->
@@ -1792,6 +1846,7 @@
         let tempColorVariants = [];
         let tempSizes = [];
         let editingProductId = null;
+        let editingCategoryKey = null;
         let currentTab = 'orders';
 
         const EGYPT_GOVERNORATES = [
@@ -1820,7 +1875,7 @@
             }, duration);
         }
 
-        function formatLE(amount) { return `LE ${Number(amount).toFixed(2)}`; }
+        function formatLE(amount) { return `${Number(amount).toFixed(2)} ج.م`; }
 
         // ─── IMAGE UPLOAD ─────────────────────────────────────────
         async function uploadToImgBB(file) {
@@ -1872,7 +1927,7 @@
             const password = input.value.trim();
 
             if (!password) {
-                error.textContent = 'Please enter a password.';
+                error.textContent = 'من فضلك أدخل كلمة المرور.';
                 return;
             }
 
@@ -1882,7 +1937,7 @@
                 document.getElementById('loginOverlay').classList.add('hidden');
                 applyAccessLevel();
                 initApp();
-                showToast('🔒 Orders-only mode activated');
+                showToast('🔒 وضع الطلبات فقط');
                 input.value = '';
             } else if (password === 'panda1414') {
                 accessLevel = 'full';
@@ -1890,10 +1945,10 @@
                 document.getElementById('loginOverlay').classList.add('hidden');
                 applyAccessLevel();
                 initApp();
-                showToast('🔓 Full access granted');
+                showToast('🔓 دخول كامل الصلاحيات');
                 input.value = '';
             } else {
-                error.textContent = '❌ Incorrect password. Try again.';
+                error.textContent = '❌ كلمة مرور خاطئة. حاول مرة أخرى.';
                 input.value = '';
                 input.focus();
             }
@@ -1903,7 +1958,6 @@
             const isFull = accessLevel === 'full';
             const isOrdersOnly = accessLevel === 'orders-only';
 
-            // Show/hide full-access elements
             document.querySelectorAll('.full-access-only').forEach(el => {
                 if (isFull) {
                     el.classList.remove('orders-only-hide');
@@ -1912,9 +1966,7 @@
                 }
             });
 
-            // If orders-only, make sure Orders tab is active and visible
             if (isOrdersOnly) {
-                // Ensure orders tab is active
                 document.querySelectorAll('.tab-btn').forEach(btn => {
                     btn.classList.toggle('active', btn.dataset.tab === 'orders');
                 });
@@ -1925,8 +1977,8 @@
                     panel.classList.toggle('active', panel.id === 'panelOrders');
                 });
                 currentTab = 'orders';
-                document.getElementById('pageTitle').textContent = 'Orders';
-                document.getElementById('pageSubtitle').textContent = 'Manage your orders.';
+                document.getElementById('pageTitle').textContent = 'الطلبات';
+                document.getElementById('pageSubtitle').textContent = 'إدارة طلباتك.';
                 document.getElementById('headerAddProduct').style.display = 'none';
             }
         }
@@ -1937,11 +1989,10 @@
             document.getElementById('loginPassword').value = '';
             document.getElementById('loginPassword').focus();
             document.getElementById('loginError').textContent = '';
-            // Reset UI
             document.querySelectorAll('.full-access-only').forEach(el => {
                 el.classList.remove('orders-only-hide');
             });
-            showToast('Logged out');
+            showToast('تم تسجيل الخروج');
         }
 
         // ─── LOAD DATA ────────────────────────────────────────────
@@ -2053,7 +2104,7 @@
             let itemsHTML = '';
             if (items.length) {
                 itemsHTML = items.map(item => {
-                    const name = item.name || 'Product';
+                    const name = item.name || 'منتج';
                     const qty = item.quantity || 1;
                     const color = item.color || '';
                     const size = item.size || '';
@@ -2086,7 +2137,7 @@
             return `
                     <div class="receipt" id="receiptToCapture">
                         <div class="receipt-header">
-                            <div class="brand">panda</div>
+                            <div class="brand">باندا</div>
                             <div class="order-id">رقم الطلب #<span>${orderId}</span></div>
                         </div>
 
@@ -2177,15 +2228,15 @@
             if (!container) return;
             if (!allOrders.length) {
                 container.innerHTML =
-                    `<div class="empty-state"><i class="fas fa-inbox"></i><p>No orders yet.</p></div>`;
+                    `<div class="empty-state"><i class="fas fa-inbox"></i><p>لا توجد طلبات حتى الآن.</p></div>`;
                 if (badge) badge.textContent = '0';
                 if (badgeNav) badgeNav.textContent = '0';
-                if (countLabel) countLabel.textContent = '0 orders';
+                if (countLabel) countLabel.textContent = '0 طلبات';
                 return;
             }
             if (badge) badge.textContent = allOrders.length;
             if (badgeNav) badgeNav.textContent = allOrders.length;
-            if (countLabel) countLabel.textContent = `${allOrders.length} orders`;
+            if (countLabel) countLabel.textContent = `${allOrders.length} طلبات`;
 
             container.innerHTML = allOrders.map(order => {
                 const statusClass = order.status || 'pending';
@@ -2194,18 +2245,26 @@
                     `<img class="thumb" src="${i.image || 'https://picsum.photos/seed/placeholder/28/28'}" alt="${i.name}" title="${i.name} (${i.color || 'Default'})" />`
                 ).join('') : '';
                 const moreItems = order.items && order.items.length > 3 ?
-                    `<span style="font-size:0.6rem;color:#999;">+${order.items.length - 3} more</span>` : '';
+                    `<span style="font-size:0.6rem;color:#999;">+${order.items.length - 3} أخرى</span>` : '';
                 let phone = order.customer?.phone || '';
                 let phoneDigits = phone.replace(/\D/g, '');
                 let waLink = phoneDigits ? `https://wa.me/20${phoneDigits}` : '#';
 
                 const orderKey = order._key || '';
 
+                const statusMap = {
+                    pending: 'قيد الانتظار',
+                    processing: 'قيد المعالجة',
+                    shipped: 'تم الشحن',
+                    delivered: 'تم التوصيل',
+                    cancelled: 'ملغي'
+                };
+
                 return `
                         <div class="order-item" data-order-key="${orderKey}">
                             <div class="order-head">
                                 <span class="id">#${orderKey.slice(-8)}</span>
-                                <span class="status status-${statusClass}">${statusClass.toUpperCase()}</span>
+                                <span class="status status-${statusClass}">${statusMap[statusClass] || statusClass}</span>
                             </div>
                             <div class="order-body">
                                 <span class="customer"><i class="fas fa-user"></i> ${order.customer?.name || '—'}</span>
@@ -2216,35 +2275,35 @@
                             </div>
                             <div class="order-actions">
                                 <select class="status-select" data-key="${orderKey}">
-                                    <option value="pending" ${order.status === 'pending' ? 'selected' : ''}>Pending</option>
-                                    <option value="processing" ${order.status === 'processing' ? 'selected' : ''}>Processing</option>
-                                    <option value="shipped" ${order.status === 'shipped' ? 'selected' : ''}>Shipped</option>
-                                    <option value="delivered" ${order.status === 'delivered' ? 'selected' : ''}>Delivered</option>
-                                    <option value="cancelled" ${order.status === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+                                    <option value="pending" ${order.status === 'pending' ? 'selected' : ''}>قيد الانتظار</option>
+                                    <option value="processing" ${order.status === 'processing' ? 'selected' : ''}>قيد المعالجة</option>
+                                    <option value="shipped" ${order.status === 'shipped' ? 'selected' : ''}>تم الشحن</option>
+                                    <option value="delivered" ${order.status === 'delivered' ? 'selected' : ''}>تم التوصيل</option>
+                                    <option value="cancelled" ${order.status === 'cancelled' ? 'selected' : ''}>ملغي</option>
                                 </select>
-                                <button class="btn btn-primary btn-sm update-status-btn" data-key="${orderKey}">Update</button>
-                                <button class="btn btn-danger btn-sm delete-order-btn" data-key="${orderKey}">Delete</button>
+                                <button class="btn btn-primary btn-sm update-status-btn" data-key="${orderKey}">تحديث</button>
+                                <button class="btn btn-danger btn-sm delete-order-btn" data-key="${orderKey}">حذف</button>
                                 <a href="${waLink}" target="_blank" class="btn btn-success btn-sm whatsapp-btn" ${!phoneDigits ? 'disabled' : ''}>
-                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                    <i class="fab fa-whatsapp"></i> واتساب
                                 </a>
                                 <button class="btn-print-png print-png-btn" data-key="${orderKey}" title="تحميل الإيصال كصورة">
                                     <i class="fas fa-image"></i> طباعة PNG
                                 </button>
-                                <span class="order-detail-toggle" data-key="${orderKey}">Show details</span>
+                                <span class="order-detail-toggle" data-key="${orderKey}">عرض التفاصيل</span>
                             </div>
                             <div class="order-detail" id="orderDetail_${orderKey}">
-                                <strong>Customer:</strong> ${order.customer?.name || '—'}<br />
-                                <strong>Phone:</strong> ${order.customer?.phone || '—'} ${order.customer?.phone2 ? '· ' + order.customer.phone2 : ''}<br />
-                                <strong>Governorate:</strong> ${order.customer?.governorate || '—'}<br />
-                                <strong>Address:</strong> ${order.customer?.address || '—'}<br />
-                                ${order.customer?.note ? `<strong>Note:</strong> ${order.customer.note}<br />` : ''}
-                                <strong>Subtotal:</strong> ${formatLE(order.subtotal || 0)}<br />
-                                <strong>Shipping:</strong> ${formatLE(order.shipping || 0)}<br />
-                                <strong>Total:</strong> ${formatLE(order.total || 0)}<br />
-                                ${screenshotUrl ? `<strong>Payment Screenshot:</strong> <img src="${screenshotUrl}" class="screenshot-thumb" onclick="window.open('${screenshotUrl}','_blank')" /><br />` : ''}
-                                <strong>Items:</strong><br />
+                                <strong>العميل:</strong> ${order.customer?.name || '—'}<br />
+                                <strong>الهاتف:</strong> ${order.customer?.phone || '—'} ${order.customer?.phone2 ? '· ' + order.customer.phone2 : ''}<br />
+                                <strong>المحافظة:</strong> ${order.customer?.governorate || '—'}<br />
+                                <strong>العنوان:</strong> ${order.customer?.address || '—'}<br />
+                                ${order.customer?.note ? `<strong>ملاحظة:</strong> ${order.customer.note}<br />` : ''}
+                                <strong>المجموع الفرعي:</strong> ${formatLE(order.subtotal || 0)}<br />
+                                <strong>الشحن:</strong> ${formatLE(order.shipping || 0)}<br />
+                                <strong>الإجمالي:</strong> ${formatLE(order.total || 0)}<br />
+                                ${screenshotUrl ? `<strong>لقطة الدفع:</strong> <img src="${screenshotUrl}" class="screenshot-thumb" onclick="window.open('${screenshotUrl}','_blank')" /><br />` : ''}
+                                <strong>المنتجات:</strong><br />
                                 ${order.items ? order.items.map(i => `
-                                    ${i.name} ×${i.quantity} (${i.color || 'Default'}, ${i.size || 'N/A'}) — ${formatLE(i.priceLE)}<br />
+                                    ${i.name} ×${i.quantity} (${i.color || 'افتراضي'}, ${i.size || 'N/A'}) — ${formatLE(i.priceLE)}<br />
                                 `).join('') : ''}
                             </div>
                         </div>
@@ -2257,7 +2316,7 @@
                     const select = document.querySelector(`.status-select[data-key="${key}"]`);
                     if (!select) return;
                     await updateOrderStatus(key, select.value);
-                    showToast(`Order status updated to ${select.value}`);
+                    showToast(`تم تحديث حالة الطلب إلى ${select.options[select.selectedIndex].text}`);
                     await loadOrdersFromFirebase();
                     renderOrders();
                 });
@@ -2266,9 +2325,9 @@
             container.querySelectorAll('.delete-order-btn').forEach(btn => {
                 btn.addEventListener('click', async () => {
                     const key = btn.dataset.key;
-                    if (!confirm('Delete this order?')) return;
+                    if (!confirm('هل تريد حذف هذا الطلب؟')) return;
                     await db.ref(`orders/${key}`).remove();
-                    showToast('Order deleted.');
+                    showToast('تم حذف الطلب.');
                     await loadOrdersFromFirebase();
                     renderOrders();
                 });
@@ -2280,7 +2339,7 @@
                     const detail = document.getElementById(`orderDetail_${key}`);
                     if (detail) {
                         detail.classList.toggle('open');
-                        el.textContent = detail.classList.contains('open') ? 'Hide details' : 'Show details';
+                        el.textContent = detail.classList.contains('open') ? 'إخفاء التفاصيل' : 'عرض التفاصيل';
                     }
                 });
             });
@@ -2313,20 +2372,20 @@
             if (!container) return;
             if (!allProducts.length) {
                 container.innerHTML =
-                    `<div class="empty-state"><i class="fas fa-tshirt"></i><p>No products yet. Add your first product above.</p></div>`;
+                    `<div class="empty-state"><i class="fas fa-tshirt"></i><p>لا توجد منتجات. أضف منتجك الأول أعلاه.</p></div>`;
                 if (badge) badge.textContent = '0';
                 if (badgeNav) badgeNav.textContent = '0';
-                if (countLabel) countLabel.textContent = '0 products';
+                if (countLabel) countLabel.textContent = '0 منتجات';
                 return;
             }
             if (badge) badge.textContent = allProducts.length;
             if (badgeNav) badgeNav.textContent = allProducts.length;
-            if (countLabel) countLabel.textContent = `${allProducts.length} products`;
+            if (countLabel) countLabel.textContent = `${allProducts.length} منتجات`;
 
             container.innerHTML = allProducts.map(p => {
                 const hasSale = p.oldPrice && p.oldPrice > p.priceLE;
-                const stockLabel = p.unlimitedStock ? '♾️ Unlimited' : (p.stock > 0 ? `${p.stock} in stock` :
-                    'Out of stock');
+                const stockLabel = p.unlimitedStock ? '♾️ غير محدود' : (p.stock > 0 ? `${p.stock} متاح` :
+                    'غير متوفر');
                 const stockBadge = p.unlimitedStock ? 'badge-unlimited' : (p.stock > 0 ? 'badge-stock' : 'badge-out');
                 const colorCount = p.colorVariants ? p.colorVariants.length : 0;
                 const sizeCount = p.sizes ? p.sizes.length : 0;
@@ -2338,20 +2397,20 @@
                                 <img class="product-thumb" src="${imgSrc}" alt="${p.name}" onclick="event.stopPropagation(); openImageLightbox('${encodeURIComponent(imgSrc)}')" />
                                 <span class="name">${p.name}</span>
                                 <span class="price">${formatLE(p.priceLE)}</span>
-                                ${hasSale ? `<span class="badge badge-sale">Sale</span>` : ''}
-                                ${p.bestSelling ? `<span class="badge badge-best">★ Best</span>` : ''}
-                                ${p.newArrival ? `<span class="badge badge-new">New</span>` : ''}
+                                ${hasSale ? `<span class="badge badge-sale">تخفيض</span>` : ''}
+                                ${p.bestSelling ? `<span class="badge badge-best">★ الأكثر مبيعاً</span>` : ''}
+                                ${p.newArrival ? `<span class="badge badge-new">جديد</span>` : ''}
                                 <span class="meta">
                                     <span class="badge ${stockBadge}">${stockLabel}</span>
                                     ${colorCount ? `<span>🎨${colorCount}</span>` : ''}
                                     ${sizeCount ? `<span>📏${sizeCount}</span>` : ''}
                                     <span style="color:#ccc;">|</span>
-                                    <span style="color:#999;">${p.category || 'Uncategorized'}</span>
+                                    <span style="color:#999;">${p.category || 'غير مصنف'}</span>
                                 </span>
                             </div>
                             <div class="actions">
-                                <button class="edit-btn" data-id="${p.id}" title="Edit"><i class="fas fa-pen"></i></button>
-                                <button class="delete-btn" data-id="${p.id}" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="edit-btn" data-id="${p.id}" title="تعديل"><i class="fas fa-pen"></i></button>
+                                <button class="delete-btn" data-id="${p.id}" title="حذف"><i class="fas fa-trash"></i></button>
                             </div>
                         </div>
                     `;
@@ -2369,9 +2428,9 @@
             container.querySelectorAll('.delete-btn').forEach(btn => {
                 btn.addEventListener('click', async () => {
                     const id = parseInt(btn.dataset.id);
-                    if (!confirm('Delete this product?')) return;
+                    if (!confirm('هل تريد حذف هذا المنتج؟')) return;
                     await db.ref(`products/${id}`).remove();
-                    showToast('Product deleted');
+                    showToast('تم حذف المنتج');
                     await loadProductsFromFirebase();
                     renderProductList();
                     renderCategories();
@@ -2393,8 +2452,8 @@
             document.getElementById('pBestSelling').checked = product.bestSelling || false;
             document.getElementById('pNewArrival').checked = product.newArrival || false;
             document.getElementById('pUnlimitedStock').checked = product.unlimitedStock || false;
-            document.getElementById('formTitle').textContent = 'Edit Product';
-            document.getElementById('submitProductBtn').textContent = 'Update Product';
+            document.getElementById('formTitle').textContent = 'تعديل المنتج';
+            document.getElementById('submitProductBtn').textContent = 'تحديث المنتج';
             document.getElementById('cancelEditBtn').style.display = 'inline-block';
 
             tempSizes = product.sizes && product.sizes.length ? [...product.sizes] : [];
@@ -2423,8 +2482,8 @@
             document.getElementById('pBestSelling').checked = false;
             document.getElementById('pNewArrival').checked = false;
             document.getElementById('pUnlimitedStock').checked = false;
-            document.getElementById('formTitle').textContent = 'Add Product';
-            document.getElementById('submitProductBtn').textContent = 'Add Product';
+            document.getElementById('formTitle').textContent = 'إضافة منتج';
+            document.getElementById('submitProductBtn').textContent = 'إضافة المنتج';
             document.getElementById('cancelEditBtn').style.display = 'none';
             editingProductId = null;
             tempColorVariants = [];
@@ -2438,7 +2497,7 @@
             const container = document.getElementById('sizeTags');
             if (!container) return;
             if (!tempSizes.length) {
-                container.innerHTML = `<span style="font-size:0.75rem;color:#bbb;">No sizes added</span>`;
+                container.innerHTML = `<span style="font-size:0.75rem;color:#bbb;">لم تتم إضافة مقاسات</span>`;
                 return;
             }
             container.innerHTML = tempSizes.map((s, idx) =>
@@ -2457,7 +2516,7 @@
             const container = document.getElementById('colorTags');
             if (!container) return;
             if (!tempColorVariants.length) {
-                container.innerHTML = `<span style="font-size:0.75rem;color:#bbb;">No color variants added</span>`;
+                container.innerHTML = `<span style="font-size:0.75rem;color:#bbb;">لم تتم إضافة ألوان</span>`;
                 return;
             }
             container.innerHTML = tempColorVariants.map((v, idx) => {
@@ -2494,10 +2553,10 @@
             const colorVariants = tempColorVariants.length ? tempColorVariants : [];
             const sizes = tempSizes.length ? tempSizes : [];
 
-            if (!name || !priceLE) { showToast('Please fill in name and price.'); return; }
-            if (!colorVariants.length) { showToast('Please add at least one color variant with an image.'); return; }
+            if (!name || !priceLE) { showToast('من فضلك املأ الاسم والسعر.'); return; }
+            if (!colorVariants.length) { showToast('من فضلك أضف لون واحد على الأقل مع صورة.'); return; }
             const firstImage = colorVariants[0].image || '';
-            if (!firstImage) { showToast('Each color variant must have an image.'); return; }
+            if (!firstImage) { showToast('كل لون يجب أن يحتوي على صورة.'); return; }
 
             const editId = document.getElementById('editProductId').value;
             const productData = {
@@ -2519,11 +2578,11 @@
             try {
                 if (editId) {
                     await db.ref(`products/${editId}`).update(productData);
-                    showToast('Product updated!');
+                    showToast('تم تحديث المنتج!');
                 } else {
                     const newId = Date.now();
                     await db.ref(`products/${newId}`).set({ id: newId, ...productData });
-                    showToast('Product added!');
+                    showToast('تم إضافة المنتج!');
                 }
                 resetProductForm();
                 await loadProductsFromFirebase();
@@ -2531,7 +2590,7 @@
                 populateCategorySelect();
                 updateBadges();
             } catch (err) {
-                showToast('Error saving product: ' + err.message);
+                showToast('خطأ في حفظ المنتج: ' + err.message);
             }
         }
 
@@ -2545,64 +2604,122 @@
             if (!container) return;
             if (!allCategories.length) {
                 container.innerHTML =
-                    `<div class="empty-state" style="padding:1.5rem 0;"><p>No categories yet.</p></div>`;
+                    `<div class="empty-state" style="padding:1.5rem 0;"><p>لا توجد تصنيفات حتى الآن.</p></div>`;
                 if (badge) badge.textContent = '0';
                 if (badgeNav) badgeNav.textContent = '0';
-                if (countLabel) countLabel.textContent = '0 categories';
+                if (countLabel) countLabel.textContent = '0 تصنيفات';
                 return;
             }
             if (badge) badge.textContent = allCategories.length;
             if (badgeNav) badgeNav.textContent = allCategories.length;
-            if (countLabel) countLabel.textContent = `${allCategories.length} categories`;
+            if (countLabel) countLabel.textContent = `${allCategories.length} تصنيفات`;
 
             container.innerHTML = allCategories.map(cat => `
                     <span class="category-chip">
                         <span class="cat-img"><img src="${cat.image}" alt="${cat.name}" /></span>
                         ${cat.name}
-                        <span class="remove-cat" data-cat="${cat.name}">✕</span>
+                        <span class="edit-cat" data-key="${cat._key}" title="تعديل"><i class="fas fa-pen"></i></span>
+                        <span class="remove-cat" data-key="${cat._key}" title="حذف">✕</span>
                     </span>
                 `).join('');
 
+            // Edit category
+            container.querySelectorAll('.edit-cat').forEach(el => {
+                el.addEventListener('click', () => {
+                    const key = el.dataset.key;
+                    const cat = allCategories.find(c => c._key === key);
+                    if (cat) loadCategoryForEdit(cat);
+                });
+            });
+
+            // Delete category
             container.querySelectorAll('.remove-cat').forEach(el => {
                 el.addEventListener('click', async () => {
-                    const name = el.dataset.cat;
-                    if (confirm(`Delete category "${name}"?`)) {
-                        const catToRemove = allCategories.find(c => c.name === name);
-                        if (catToRemove && catToRemove._key) {
-                            await db.ref(`categories/${catToRemove._key}`).remove();
-                            await loadCategoriesFromFirebase();
-                            renderCategories();
-                            populateCategorySelect();
-                            updateBadges();
-                            showToast(`Category "${name}" deleted`);
-                        }
+                    const key = el.dataset.key;
+                    const cat = allCategories.find(c => c._key === key);
+                    if (!cat) return;
+                    if (confirm(`هل تريد حذف التصنيف "${cat.name}"؟`)) {
+                        await db.ref(`categories/${key}`).remove();
+                        await loadCategoriesFromFirebase();
+                        renderCategories();
+                        populateCategorySelect();
+                        updateBadges();
+                        showToast(`تم حذف التصنيف "${cat.name}"`);
                     }
                 });
             });
         }
 
-        async function addCategory() {
+        function loadCategoryForEdit(cat) {
+            editingCategoryKey = cat._key;
+            document.getElementById('editCategoryKey').value = cat._key;
+            document.getElementById('newCategoryName').value = cat.name;
+            document.getElementById('categoryImageUrl').value = cat.image || '';
+            document.getElementById('categoryFormTitle').textContent = 'تعديل التصنيف';
+            document.getElementById('addCategoryBtn').innerHTML = '<i class="fas fa-save"></i> تحديث التصنيف';
+            document.getElementById('cancelCategoryEditBtn').style.display = 'inline-block';
+
+            // Show preview
+            const previewContainer = document.getElementById('categoryImagePreview');
+            const previewImg = document.getElementById('categoryPreviewImg');
+            if (cat.image) {
+                previewImg.src = cat.image;
+                previewContainer.style.display = 'block';
+            } else {
+                previewContainer.style.display = 'none';
+            }
+
+            document.getElementById('newCategoryName').focus();
+        }
+
+        function resetCategoryForm() {
+            editingCategoryKey = null;
+            document.getElementById('editCategoryKey').value = '';
+            document.getElementById('newCategoryName').value = '';
+            document.getElementById('categoryImageUrl').value = '';
+            document.getElementById('categoryImageFile').value = '';
+            document.getElementById('categoryFormTitle').textContent = 'إضافة تصنيف جديد';
+            document.getElementById('addCategoryBtn').innerHTML = '<i class="fas fa-plus"></i> إضافة التصنيف';
+            document.getElementById('cancelCategoryEditBtn').style.display = 'none';
+            document.getElementById('categoryImagePreview').style.display = 'none';
+            document.getElementById('categoryPreviewImg').src = '';
+        }
+
+        async function handleCategorySubmit() {
             const name = document.getElementById('newCategoryName').value.trim();
             const image = document.getElementById('categoryImageUrl').value.trim();
-            if (!name) { showToast('Please enter a category name.'); return; }
-            if (!image) { showToast('Please upload an image first.'); return; }
-            if (allCategories.find(c => c.name.toLowerCase() === name.toLowerCase())) {
-                showToast('Category already exists.');
+            const editKey = document.getElementById('editCategoryKey').value;
+
+            if (!name) { showToast('من فضلك أدخل اسم التصنيف.'); return; }
+            if (!image) { showToast('من فضلك ارفع صورة أولاً.'); return; }
+
+            // Check for duplicate name (exclude self if editing)
+            const duplicate = allCategories.find(c =>
+                c.name.toLowerCase() === name.toLowerCase() && c._key !== editKey
+            );
+            if (duplicate) {
+                showToast('التصنيف موجود بالفعل.');
                 return;
             }
+
             try {
-                const ref = db.ref('categories').push();
-                await ref.set({ name, image });
+                if (editKey) {
+                    // Update existing
+                    await db.ref(`categories/${editKey}`).update({ name, image });
+                    showToast(`تم تحديث التصنيف "${name}"!`);
+                } else {
+                    // Add new
+                    const ref = db.ref('categories').push();
+                    await ref.set({ name, image });
+                    showToast(`تم إضافة التصنيف "${name}"!`);
+                }
+                resetCategoryForm();
                 await loadCategoriesFromFirebase();
                 renderCategories();
                 populateCategorySelect();
-                document.getElementById('newCategoryName').value = '';
-                document.getElementById('categoryImageUrl').value = '';
-                document.getElementById('categoryImageFile').value = '';
                 updateBadges();
-                showToast(`Category "${name}" added!`);
             } catch (err) {
-                showToast('Error: ' + err.message);
+                showToast('خطأ: ' + err.message);
             }
         }
 
@@ -2629,7 +2746,7 @@
                         <div class="shipping-item">
                             <span class="gov-name">${g}</span>
                             <input type="number" class="ship-price-input" data-gov="${g}" value="${price}" step="0.5" min="0" />
-                            <button class="save-ship-btn" data-gov="${g}">Save</button>
+                            <button class="save-ship-btn" data-gov="${g}">حفظ</button>
                         </div>
                     `;
             });
@@ -2641,9 +2758,9 @@
                     const input = document.querySelector(`.ship-price-input[data-gov="${gov}"]`);
                     if (!input) return;
                     const val = parseFloat(input.value);
-                    if (isNaN(val) || val < 0) { showToast('Please enter a valid price.'); return; }
+                    if (isNaN(val) || val < 0) { showToast('من فضلك أدخل سعراً صحيحاً.'); return; }
                     await updateShippingRate(gov, val);
-                    showToast(`Shipping for ${gov} updated to ${formatLE(val)}`);
+                    showToast(`تم تحديث سعر الشحن لـ ${gov} إلى ${formatLE(val)}`);
                     renderShipping();
                 });
             });
@@ -2696,9 +2813,8 @@
 
         // ─── TAB SWITCHING ────────────────────────────────────────
         function switchTab(tab) {
-            // If orders-only, only allow orders tab
             if (accessLevel === 'orders-only' && tab !== 'orders') {
-                showToast('⚠️ Orders-only mode. Full access required.');
+                showToast('⚠️ وضع الطلبات فقط. مطلوب صلاحية كاملة.');
                 return;
             }
 
@@ -2713,13 +2829,13 @@
                 panel.classList.toggle('active', panel.id === `panel${tab.charAt(0).toUpperCase() + tab.slice(1)}`);
             });
             const titles = {
-                orders: 'Orders',
-                products: 'Products',
-                categories: 'Categories',
-                shipping: 'Shipping Rates'
+                orders: 'الطلبات',
+                products: 'المنتجات',
+                categories: 'التصنيفات',
+                shipping: 'أسعار الشحن'
             };
-            document.getElementById('pageTitle').textContent = titles[tab] || 'Dashboard';
-            document.getElementById('pageSubtitle').textContent = `Manage your ${titles[tab]?.toLowerCase() || 'store'}.`;
+            document.getElementById('pageTitle').textContent = titles[tab] || 'لوحة التحكم';
+            document.getElementById('pageSubtitle').textContent = `إدارة ${titles[tab]?.toLowerCase() || 'المتجر'}.`;
 
             const addBtn = document.getElementById('headerAddProduct');
             if (tab === 'products' && accessLevel === 'full') {
@@ -2745,7 +2861,7 @@
             document.getElementById('sidebarOverlay').classList.remove('open');
         }
 
-        // ─── INIT APP (called after login) ──────────────────────
+        // ─── INIT APP ─────────────────────────────────────────────
         async function initApp() {
             await loadCategoriesFromFirebase();
             await loadProductsFromFirebase();
@@ -2779,54 +2895,60 @@
                 const fileInput = document.getElementById('colorImageFile');
                 const color = picker.value;
                 const file = fileInput.files[0];
-                if (!color) { showToast('Please select a color.'); return; }
-                if (!file) { showToast('Please select an image file.'); return; }
+                if (!color) { showToast('من فضلك اختر لوناً.'); return; }
+                if (!file) { showToast('من فضلك اختر ملف صورة.'); return; }
                 const url = await uploadToImgBB(file);
-                if (!url) { showToast('Image upload failed.'); return; }
-                if (tempColorVariants.find(v => v.color === color)) { showToast('Color already added'); return; }
+                if (!url) { showToast('فشل رفع الصورة.'); return; }
+                if (tempColorVariants.find(v => v.color === color)) { showToast('اللون مضاف بالفعل'); return; }
                 tempColorVariants.push({ color: color, image: url });
                 renderColorTags();
                 fileInput.value = '';
-                showToast(`Color variant added!`);
+                showToast('تم إضافة اللون!');
             });
 
             document.getElementById('addSizeBtn').addEventListener('click', () => {
                 const input = document.getElementById('sizeInput');
                 const size = input.value.trim().toUpperCase();
-                if (!size) { showToast('Please enter a size.'); return; }
-                if (tempSizes.includes(size)) { showToast('Size already added.'); return; }
+                if (!size) { showToast('من فضلك أدخل مقاساً.'); return; }
+                if (tempSizes.includes(size)) { showToast('المقاس مضاف بالفعل.'); return; }
                 tempSizes.push(size);
                 renderSizeTags();
                 input.value = '';
-                showToast(`Size "${size}" added!`);
+                showToast(`تم إضافة المقاس "${size}"!`);
             });
             document.getElementById('sizeInput').addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') { e.preventDefault();
                     document.getElementById('addSizeBtn').click(); }
             });
 
-            document.getElementById('addCategoryBtn').addEventListener('click', addCategory);
+            // Category form handlers
+            document.getElementById('addCategoryBtn').addEventListener('click', handleCategorySubmit);
             document.getElementById('newCategoryName').addEventListener('keydown', (e) => { if (e.key === 'Enter')
-                    addCategory(); });
+                    handleCategorySubmit(); });
+            document.getElementById('cancelCategoryEditBtn').addEventListener('click', resetCategoryForm);
 
             document.getElementById('uploadCategoryImageBtn').addEventListener('click', async () => {
                 const fileInput = document.getElementById('categoryImageFile');
                 const file = fileInput.files[0];
-                if (!file) { showToast('Please select an image file.'); return; }
+                if (!file) { showToast('من فضلك اختر ملف صورة.'); return; }
                 const url = await uploadToImgBB(file);
                 if (url) {
                     document.getElementById('categoryImageUrl').value = url;
-                    showToast('Image uploaded successfully!');
+                    const previewContainer = document.getElementById('categoryImagePreview');
+                    const previewImg = document.getElementById('categoryPreviewImg');
+                    previewImg.src = url;
+                    previewContainer.style.display = 'block';
+                    showToast('تم رفع الصورة بنجاح!');
                 } else {
-                    showToast('Upload failed. Try again.');
+                    showToast('فشل الرفع. حاول مرة أخرى.');
                 }
                 fileInput.value = '';
             });
 
             document.getElementById('resetShippingBtn').addEventListener('click', async () => {
-                if (!confirm('Reset all shipping rates to 1 LE?')) return;
+                if (!confirm('هل تريد إعادة جميع أسعار الشحن إلى 1 ج.م؟')) return;
                 await resetShippingToDefault();
-                showToast('All shipping rates reset to 1 LE');
+                showToast('تم إعادة جميع أسعار الشحن إلى 1 ج.م');
                 renderShipping();
             });
 
@@ -2839,7 +2961,7 @@
 
             document.getElementById('navAddProduct').addEventListener('click', (e) => {
                 e.preventDefault();
-                if (accessLevel === 'orders-only') { showToast('⚠️ Full access required.'); return; }
+                if (accessLevel === 'orders-only') { showToast('⚠️ مطلوب صلاحية كاملة.'); return; }
                 switchTab('products');
                 resetProductForm();
                 document.getElementById('productFormCard').scrollIntoView({ behavior: 'smooth' });
@@ -2847,24 +2969,23 @@
             });
             document.getElementById('navAddCategory').addEventListener('click', (e) => {
                 e.preventDefault();
-                if (accessLevel === 'orders-only') { showToast('⚠️ Full access required.'); return; }
+                if (accessLevel === 'orders-only') { showToast('⚠️ مطلوب صلاحية كاملة.'); return; }
                 switchTab('categories');
+                resetCategoryForm();
                 document.getElementById('newCategoryName').focus();
                 closeSidebar();
             });
 
             document.getElementById('headerAddProduct').addEventListener('click', () => {
-                if (accessLevel === 'orders-only') { showToast('⚠️ Full access required.'); return; }
+                if (accessLevel === 'orders-only') { showToast('⚠️ مطلوب صلاحية كاملة.'); return; }
                 resetProductForm();
                 document.getElementById('productFormCard').scrollIntoView({ behavior: 'smooth' });
             });
 
             document.getElementById('logoutLink').addEventListener('click', logout);
 
-            // Re-apply access level in case any dynamic elements were added
             applyAccessLevel();
 
-            // Ensure orders tab is active if in orders-only mode
             if (accessLevel === 'orders-only') {
                 switchTab('orders');
             } else {
@@ -2874,7 +2995,6 @@
 
         // ─── INIT ──────────────────────────────────────────────────
         document.addEventListener('DOMContentLoaded', function() {
-            // Login handlers
             document.getElementById('loginBtn').addEventListener('click', handleLogin);
             document.getElementById('loginPassword').addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
@@ -2882,8 +3002,10 @@
                     handleLogin();
                 }
             });
-            // Focus the password field
             document.getElementById('loginPassword').focus();
+
+            // Reset category form on load
+            resetCategoryForm();
         });
     </script>
 </body>

@@ -945,6 +945,54 @@
         .order-item .order-detail .screenshot-thumb:hover {
             transform: scale(1.04);
         }
+        /* ─── ORDER DETAIL PRODUCT ROW ─── */
+        .order-detail .product-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f2f5;
+        }
+        .order-detail .product-row:last-child {
+            border-bottom: none;
+        }
+        .order-detail .product-row .pd-img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #e8eaed;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+            background: #fff;
+        }
+        .order-detail .product-row .pd-img:hover {
+            transform: scale(1.06);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            border-color: #1a1a1e;
+        }
+        .order-detail .product-row .pd-name {
+            flex: 1;
+            font-size: 0.8rem;
+            color: #333;
+        }
+        .order-detail .product-row .pd-size {
+            font-size: 0.7rem;
+            color: #888;
+            white-space: nowrap;
+        }
+        .order-detail .product-row .pd-price {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #1a1a1e;
+            white-space: nowrap;
+        }
+        .order-detail .product-row .pd-qty {
+            font-size: 0.75rem;
+            color: #666;
+            white-space: nowrap;
+        }
 
         /* ─── COLOR & SIZE TAGS ─── */
         .tag-container {
@@ -2242,7 +2290,7 @@
                 const statusClass = order.status || 'pending';
                 const screenshotUrl = order.paymentScreenshot || '';
                 const itemsPreview = order.items ? order.items.slice(0, 3).map(i =>
-                    `<img class="thumb" src="${i.image || 'https://picsum.photos/seed/placeholder/28/28'}" alt="${i.name}" title="${i.name} (${i.color || 'Default'})" />`
+                    `<img class="thumb" src="${i.image || 'https://picsum.photos/seed/placeholder/28/28'}" alt="${i.name}" title="${i.name}" />`
                 ).join('') : '';
                 const moreItems = order.items && order.items.length > 3 ?
                     `<span style="font-size:0.6rem;color:#999;">+${order.items.length - 3} أخرى</span>` : '';
@@ -2259,6 +2307,25 @@
                     delivered: 'تم التوصيل',
                     cancelled: 'ملغي'
                 };
+
+                // ─── BUILD PRODUCT ROWS WITH IMAGES ───
+                let productRowsHTML = '';
+                if (order.items && order.items.length) {
+                    productRowsHTML = order.items.map(i => {
+                        const imgSrc = i.image || 'https://picsum.photos/seed/placeholder/40/40';
+                        return `
+                                <div class="product-row">
+                                    <img class="pd-img" src="${imgSrc}" alt="${i.name}" onclick="event.stopPropagation(); openImageLightbox('${encodeURIComponent(imgSrc)}')" />
+                                    <span class="pd-name">${i.name}</span>
+                                    <span class="pd-qty">×${i.quantity}</span>
+                                    <span class="pd-size">${i.size || 'N/A'}</span>
+                                    <span class="pd-price">${formatLE(i.priceLE)}</span>
+                                </div>
+                            `;
+                    }).join('');
+                } else {
+                    productRowsHTML = `<div style="color:#999;font-size:0.75rem;padding:4px 0;">لا توجد منتجات</div>`;
+                }
 
                 return `
                         <div class="order-item" data-order-key="${orderKey}">
@@ -2301,10 +2368,10 @@
                                 <strong>الشحن:</strong> ${formatLE(order.shipping || 0)}<br />
                                 <strong>الإجمالي:</strong> ${formatLE(order.total || 0)}<br />
                                 ${screenshotUrl ? `<strong>لقطة الدفع:</strong> <img src="${screenshotUrl}" class="screenshot-thumb" onclick="window.open('${screenshotUrl}','_blank')" /><br />` : ''}
-                                <strong>المنتجات:</strong><br />
-                                ${order.items ? order.items.map(i => `
-                                    ${i.name} ×${i.quantity} (${i.color || 'افتراضي'}, ${i.size || 'N/A'}) — ${formatLE(i.priceLE)}<br />
-                                `).join('') : ''}
+                                <strong>المنتجات:</strong>
+                                <div style="display:flex;flex-direction:column;gap:2px;margin-top:4px;">
+                                    ${productRowsHTML}
+                                </div>
                             </div>
                         </div>
                     `;
